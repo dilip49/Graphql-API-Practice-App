@@ -6,6 +6,5 @@ module Types
     field :user_id, Integer, null: false
     field :title, String
     field :body, String
-  
   end
 end
