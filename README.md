@@ -1,28 +1,48 @@
 # README
+# Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[graphql-demo.test]
 
-Things you may want to cover:
+## Install
 
-* Ruby version
-  ruby '2.7.2'
+### Clone the repository
 
-* System dependencies
-  Ruby on rails 6.0.4
+```shell
+git clone https://github.com/dilip49/graphql-demo.git
+cd graphql-demo
+```
 
-* Basic Mutation example
-  mutation {
-  
-  createPost(input: {
-    title: "Hello, this is testing"
-    body: "This is body for the testing"
-    userId: 1
-  }) {
-    post {
-      title
-      body
-     }errors
-    }
-  }
+### Check your Ruby version
+
+```shell
+ruby -v
+```
+
+The ouput should start with something like `ruby '2.7.2'`
+
+If not, install the right ruby version using [rbenv](https://github.com/rbenv/rbenv) (it could take a while):
+
+```shell
+rbenv install 2.7.2
+```
+
+### Install dependencies
+
+Using [Bundler](https://github.com/bundler/bundler) and [Yarn](https://github.com/yarnpkg/yarn):
+
+```shell
+bundle && yarn
+```
+
+### Initialize the database
+
+```shell
+rails db:create db:migrate db:seed
+```
+
+## Serve
+
+```shell
+rails s
+```
 
