@@ -14,7 +14,6 @@ class Mutations::CreatePost < Mutations::BaseMutation
     if(post.save)
       { post: post, errors: [] }
     else
-      binding.pry
       { post: nil, errors: post.errors.full_messages }
     end
   end
